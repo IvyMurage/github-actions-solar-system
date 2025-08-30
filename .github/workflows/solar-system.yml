@@ -46,6 +46,9 @@ jobs:
           uses: actions/setup-node@v4
           with:
             node-version: 20
+            
+        - name: Install dependencies
+          run: npm install
     
         - name: Run code coverage
           continue-on-error: true
@@ -58,4 +61,5 @@ jobs:
             name: Code-Coverage-Result
             path: coverage
             retention-days: 5
+
 
